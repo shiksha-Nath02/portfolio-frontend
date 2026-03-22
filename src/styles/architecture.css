@@ -1,0 +1,40 @@
+.architecture-container {
+  padding: 2rem;
+  background: radial-gradient(circle at top left, #111827, #0f172a);
+  color: #e5e7eb;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.arch-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #38bdf8;
+}
+
+.arch-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.arch-section h2 {
+  margin-bottom: 0.75rem;
+  color: #facc15;
+}
+
+.arch-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.arch-section li {
+  margin-bottom: 0.5rem;
+}
+
+.arch-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #f87171;
+}
