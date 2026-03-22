@@ -27,7 +27,7 @@ import { fetchProjectIndex } from "../engine/contentFetcher";
 // 2. Developer Mode Context
 const DevModeContext = createContext();
 const DevModeProvider = ({ children }) => {
-  const [devMode, setDevMode] = useState(false);
+  const [devMode, setDevMode] = useState(true);
   const toggleDevMode = () => setDevMode(!devMode);
   return (
     <DevModeContext.Provider value={{ devMode, toggleDevMode }}>
