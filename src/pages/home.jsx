@@ -243,7 +243,7 @@ const Navbar = () => {
           </button>
           
           <a 
-            href="https://drive.google.com/file/d/1enAf-ZjsPUhYhTV47VKNABarYWA4Pih-/view"
+            href="https://drive.google.com/drive/u/0/folders/1VH4hLWzTpATspoIRrnA2yRhTLEHXl77u"
             target="_blank"
             rel="noopener noreferrer"
             className="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5"
@@ -719,7 +719,7 @@ function AppContent() {
                   Contact Me
                 </button>
                 <a 
-                  href="https://drive.google.com/file/d/1enAf-ZjsPUhYhTV47VKNABarYWA4Pih-/view"
+                  href="https://drive.google.com/drive/u/0/folders/1VH4hLWzTpATspoIRrnA2yRhTLEHXl77u"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold rounded-lg hover:bg-emerald-500/20 hover:border-emerald-500/50 backdrop-blur-sm hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
