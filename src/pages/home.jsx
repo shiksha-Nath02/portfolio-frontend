@@ -294,14 +294,15 @@ const TechBadge = ({ name, icon: Icon }) => (
 );
 
 // 6. Dramatic Hover Reveal Component
-const HoverReveal = ({ text, hiddenText, link, isTitle = false }) => {
-  const Wrapper = link ? 'a' : 'span';
-  const wrapperProps = link ? { href: link.replace('GET ', ''), target: "_blank", rel: "noopener noreferrer" } : {};
+const HoverReveal = ({ text, hiddenText, link, linkHref, isTitle = false }) => {
+  const href = linkHref || (link ? link.replace('GET ', '') : null);
+  const Wrapper = href ? 'a' : 'span';
+  const wrapperProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {};
 
   return (
     <Wrapper
       {...wrapperProps}
-      className={`relative inline-block group ${link ? 'cursor-pointer' : 'cursor-default'} ${
+      className={`relative inline-block group ${href ? 'cursor-pointer' : 'cursor-default'} ${
         isTitle ? '' : 'text-emerald-400 font-medium border-b border-emerald-500/30 hover:border-emerald-400'
       } transition-colors`}
     >
@@ -314,6 +315,9 @@ const HoverReveal = ({ text, hiddenText, link, isTitle = false }) => {
           <span className="mt-1 text-xs font-mono text-emerald-400 bg-emerald-500/10 p-2 rounded border border-emerald-500/20 break-all flex items-center gap-1.5">
             <ExternalLink size={12} /> {link}
           </span>
+        )}
+        {isTitle && (
+          <span className="text-[10px] font-mono text-slate-500 italic">// intentional easter egg</span>
         )}
         <span className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-emerald-500/50"></span>
       </span>
@@ -673,6 +677,8 @@ function AppContent() {
                 <HoverReveal
                   text="Shiksha Nath"
                   hiddenText="Identity verified. Fetching live raw user telemetry data..."
+                  link="GET https://api.github.com/users/shiksha-Nath02"
+                  linkHref="https://github.com/shiksha-Nath02"
                   isTitle
                 />
               </h1>
