@@ -7,7 +7,7 @@ if (content?.json?.timeline?.phases?.length) sections.push({ id: "timeline", lab
 if (content?.markdown?.overview) sections.push({ id: "overview", label: "Overview" });
 if (content?.json?.architecture?.nodes?.length) sections.push({ id: "architecture", label: "Architecture" });
 if (content?.json?.api?.endpoints?.length) sections.push({ id: "api", label: "API Reference" });
-if (content?.json?.database?.entities?.length) sections.push({ id: "database", label: "Database Schema" });
+if (content?.json?.database?.tables?.length) sections.push({ id: "database", label: "Database Schema" });
 if (content?.markdown?.challenges) sections.push({ id: "challenges", label: "Challenges" });
 if (content?.markdown?.lessons) sections.push({ id: "lessons", label: "Lessons Learned" });
 
