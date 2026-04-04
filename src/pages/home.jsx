@@ -434,14 +434,13 @@ const CinematicModule = ({ index, videoId, title, main, hook, command, dropdownI
             >
               <X size={20} />
             </button>
-            <iframe
-              className="w-full h-full absolute inset-0"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&controls=1&modestbranding=1`}
-              title={title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <video
+              className="w-full h-full absolute inset-0 object-cover"
+              src={videoId}
+              controls
+              autoPlay
+              loop
+            />
           </div>
         </div>
       )}
@@ -462,14 +461,14 @@ const CinematicModule = ({ index, videoId, title, main, hook, command, dropdownI
           </button>
 
           {inView ? (
-            <iframe
-              className="w-full h-full absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1`}
-              title={title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <video
+              className="w-full h-full absolute inset-0 object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+              src={videoId}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center text-emerald-500/30 text-xs tracking-widest uppercase font-mono">
               <Activity className="animate-pulse mb-2" size={20} />
@@ -575,7 +574,7 @@ function AppContent() {
   // Updated Cinematic System Modules Data
   const systemModules = [
     {
-      videoId: "zQxWViVaFak",
+      videoId: "/part1.mp4",
       title: "MODULE 1 — AUTO SYNC",
       main: "Add “portfolio” to your repo → it appears instantly.",
       hook: "NO FORMS. NO MANUAL UPDATES.",
@@ -583,7 +582,7 @@ function AppContent() {
       dropdownItems: ["Portfolio scans GitHub repos", "Filters based on metadata keyword", "Fetches structured docs from repo", "Dynamically renders UI"]
     },
     {
-      videoId: "jMrLW788eeg",
+      videoId: "/part2.mp4",
       title: "MODULE 2 — DEV MODE",
       main: "Dev Mode ON — welcome developers.",
       hook: "LET’S DIVE INTO THE SYSTEM ARCHITECTURE.",
@@ -591,7 +590,7 @@ function AppContent() {
       dropdownItems: ["architecture.json → system structure", "api.json → endpoints", "database.json → schema", "timeline.json → project evolution", "markdown → overview, challenges, lessons"]
     },
     {
-      videoId: "OQGEPdrXORk",
+      videoId: "/part3.mp4",
       title: "MODULE 3 — INIT",
       main: "Start with nothing → get a documentation system.",
       hook: "But I never wrote this manually...\nSo how did it get here?",
@@ -599,7 +598,7 @@ function AppContent() {
       dropdownItems: ["Creates /docs folder", "Sets JSON + markdown files", "Installs Git pre-commit hook", "Prepares auto documentation system"]
     },
     {
-      videoId: "FZ76AxNrMwQ",
+      videoId: "/part4.mp4",
       title: "MODULE 4 — ENGINE",
       main: "Your code gets analyzed — not described.",
       hook: "AST-POWERED ANALYSIS.",
@@ -607,7 +606,7 @@ function AppContent() {
       dropdownItems: ["Uses AST parsing", "Detects APIs (Express)", "Detects architecture layers", "Parses DB schemas (Prisma/Mongoose/SQL)", "Outputs structured JSON"]
     },
     {
-      videoId: "d-Yor-De_ow",
+      videoId: "/part5.mp4",
       title: "MODULE 5 — EVOLUTION",
       main: "Every commit updates your project story.",
       hook: "YOUR CODE WRITES ITS OWN HISTORY.",
