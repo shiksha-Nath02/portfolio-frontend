@@ -67,7 +67,7 @@ export default function ProjectPage() {
     if (content.json?.timeline?.phases?.length) ids.push("timeline");
     if (content.json?.architecture?.nodes?.length) ids.push("architecture");
     if (content.json?.api?.endpoints?.length) ids.push("api");
-    if (content.json?.database?.entities?.length) ids.push("database");
+    if (content.json?.database?.tables?.length) ids.push("database");
 
     return ids;
   }, [content]);
@@ -127,10 +127,10 @@ export default function ProjectPage() {
 
         {/* Docs viewer */}
         {!noDocs && (
-          <div className="flex gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
 
-            <div className="flex-1 min-w-0">
-              <div className="max-w-3xl space-y-2">
+            <div className="flex-1 min-w-0 w-full">
+              <div className="space-y-4">
 
                 {content?.json?.timeline && (
                   <CollapsibleSection id="timeline" title="Evolution Timeline" defaultOpen>

@@ -89,8 +89,32 @@ export const TimelineSection = ({ timeline = DEMO_TIMELINE }) => {
           </div>
         </div>
 
-        {/* Scrollable Timeline Container */}
-        <div className="w-full overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing pb-12 pt-6 px-6 lg:px-12">
+        {/* Mobile: Vertical Timeline */}
+        <div className="md:hidden px-4 py-2 relative">
+          <div className="absolute left-7 top-0 bottom-0 w-[2px] bg-slate-800/80 rounded-full" />
+          <div
+            className="absolute left-7 top-0 w-[2px] bg-gradient-to-b from-teal-600 to-teal-400 rounded-l-full transition-all duration-1000"
+            style={{ height: `${progressPercentage}%` }}
+          />
+          <div className="space-y-4">
+            {timeline.phases.map((phase) => {
+              const isCompleted = phase.status === 'completed';
+              const isCurrent = phase.status === 'in-progress';
+              return (
+                <div key={phase.id} className="relative pl-12">
+                  <div className={`
+                    absolute left-5 top-5 w-4 h-4 rounded-full border-[2.5px] -translate-x-1/2 shadow-[0_0_0_3px_rgba(15,23,42,1)]
+                    ${isCompleted ? 'bg-teal-500 border-teal-200 shadow-[0_0_10px_rgba(20,184,166,0.4),0_0_0_3px_rgba(15,23,42,1)]' : isCurrent ? 'bg-slate-900 border-teal-400 animate-pulse' : 'bg-slate-900 border-slate-600'}
+                  `} />
+                  <TimelineCard phase={phase} isCompleted={isCompleted} isCurrent={isCurrent} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Desktop: Horizontal Scrollable Timeline */}
+        <div className="hidden md:block w-full overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing pb-12 pt-6 px-6 lg:px-12">
           
           {/* Main Track with fixed height to accommodate cards above and below */}
           <div className="relative min-w-max flex items-center h-[460px]">

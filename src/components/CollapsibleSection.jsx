@@ -29,7 +29,7 @@ const CollapsibleSection = ({ id, title, defaultOpen = true, children }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="pl-8">{children}</div>
+          <div className="pl-2 md:pl-8">{children}</div>
         </div>
       </div>
     </section>
