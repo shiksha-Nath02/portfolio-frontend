@@ -114,10 +114,10 @@ export const TimelineSection = ({ timeline = DEMO_TIMELINE }) => {
         </div>
 
         {/* Desktop: Horizontal Scrollable Timeline */}
-        <div className="hidden md:block w-full overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing pb-12 pt-6 px-6 lg:px-12">
-          
+        <div className="hidden md:block w-full overflow-x-auto hide-scrollbar cursor-grab active:cursor-grabbing pb-16 pt-16 px-6 lg:px-12">
+
           {/* Main Track with fixed height to accommodate cards above and below */}
-          <div className="relative min-w-max flex items-center h-[460px]">
+          <div className="relative min-w-max flex items-center h-[560px]">
             
             {/* The Main Horizontal Axis (Centered Vertically) */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-slate-800/80 -translate-y-1/2 rounded-full z-0" />

@@ -367,27 +367,27 @@ const GameModeSplash = ({ onEnter, onExit }) => {
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center bg-slate-950/85 backdrop-blur-md">
-      <div className="font-mono text-center w-[90%] max-w-2xl mx-auto p-10 bg-slate-900/40 border border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.15)] relative overflow-hidden">
+      <div className="font-mono text-center w-[92%] max-w-2xl mx-auto p-6 sm:p-10 bg-slate-900/40 border border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.15)] relative overflow-hidden">
         {/* Gaming UI Corner Accents */}
         <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-emerald-400" />
         <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-emerald-400" />
-        
-        <div className="text-emerald-400 text-xl md:text-2xl h-8 font-bold mb-4">
+
+        <div className="text-emerald-400 text-base sm:text-xl md:text-2xl font-bold mb-4 min-h-[1.75rem] leading-tight">
           <TypewriterText text="> SYSTEM DETECTED: NEW USER" speed={40} delay={300} />
         </div>
-        
-        <div className="text-slate-300 text-base md:text-lg h-16 flex flex-col items-center justify-center space-y-2">
+
+        <div className="text-slate-300 text-sm sm:text-base md:text-lg flex flex-col items-center justify-center space-y-2 min-h-[4rem]">
           <TypewriterText text="Thinking it's just another portfolio?" speed={30} delay={1500} />
           <div className="text-white font-bold">
             <TypewriterText text="Wanna dive into it?" speed={30} delay={2800} />
           </div>
         </div>
-        
-        <div className={`flex flex-col sm:flex-row gap-4 justify-center mt-10 transition-all duration-700 ${showBtns ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-          <button onClick={onEnter} className="px-6 py-3 bg-emerald-500/10 text-emerald-400 border border-emerald-500/50 hover:bg-emerald-500/20 hover:scale-105 transition-all text-xs tracking-widest font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+
+        <div className={`flex flex-col sm:flex-row gap-3 justify-center mt-8 transition-all duration-700 ${showBtns ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+          <button onClick={onEnter} className="px-5 py-3 bg-emerald-500/10 text-emerald-400 border border-emerald-500/50 hover:bg-emerald-500/20 hover:scale-105 transition-all text-xs tracking-widest font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)]">
             [ ENTER SYSTEM ]
           </button>
-          <button onClick={onExit} className="px-6 py-3 bg-slate-900 text-slate-400 border border-slate-700 hover:bg-slate-800 hover:text-white transition-all text-xs tracking-widest">
+          <button onClick={onExit} className="px-5 py-3 bg-slate-900 text-slate-400 border border-slate-700 hover:bg-slate-800 hover:text-white transition-all text-xs tracking-widest">
             [ EXIT TO NORMAL VIEW ]
           </button>
         </div>
