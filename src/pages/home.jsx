@@ -670,10 +670,9 @@ function AppContent() {
 
             <FadeIn delay={100}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-                <HoverReveal 
-                  text="Shiksha Nath" 
-                  hiddenText="Identity verified. Fetching live raw user telemetry data..." 
-                  link="GET https://api.github.com/users/shiksha-Nath02"
+                <HoverReveal
+                  text="Shiksha Nath"
+                  hiddenText="Identity verified. Fetching live raw user telemetry data..."
                   isTitle
                 />
               </h1>
